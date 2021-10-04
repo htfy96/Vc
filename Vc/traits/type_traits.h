@@ -69,6 +69,8 @@ template <> struct is_valid_vector_argument<int>    : public std::true_type {};
 template <> struct is_valid_vector_argument<unsigned int>   : public std::true_type {};
 template <> struct is_valid_vector_argument<short>  : public std::true_type {};
 template <> struct is_valid_vector_argument<unsigned short> : public std::true_type {};
+template <> struct is_valid_vector_argument<signed char>  : public std::true_type {};
+template <> struct is_valid_vector_argument<unsigned char> : public std::true_type {};
 
 template<typename T> struct is_simd_mask_internal : public std::false_type {};
 template<typename T> struct is_simd_vector_internal : public std::false_type {};
