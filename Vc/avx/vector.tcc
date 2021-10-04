@@ -56,10 +56,14 @@ Vc_INTRINSIC AVX2::   int_m operator==(AVX2::   int_v a, AVX2::   int_v b) { ret
 Vc_INTRINSIC AVX2::  uint_m operator==(AVX2::  uint_v a, AVX2::  uint_v b) { return AVX::cmpeq_epi32(a.data(), b.data()); }
 Vc_INTRINSIC AVX2:: short_m operator==(AVX2:: short_v a, AVX2:: short_v b) { return AVX::cmpeq_epi16(a.data(), b.data()); }
 Vc_INTRINSIC AVX2::ushort_m operator==(AVX2::ushort_v a, AVX2::ushort_v b) { return AVX::cmpeq_epi16(a.data(), b.data()); }
+Vc_INTRINSIC AVX2:: uchar_m operator==(AVX2:: uchar_v a, AVX2:: uchar_v b) { return AVX::cmpeq_epi8(a.data(), b.data()); }
+Vc_INTRINSIC AVX2:: schar_m operator==(AVX2:: schar_v a, AVX2:: schar_v b) { return AVX::cmpeq_epi8(a.data(), b.data()); }
 Vc_INTRINSIC AVX2::   int_m operator!=(AVX2::   int_v a, AVX2::   int_v b) { return not_(AVX::cmpeq_epi32(a.data(), b.data())); }
 Vc_INTRINSIC AVX2::  uint_m operator!=(AVX2::  uint_v a, AVX2::  uint_v b) { return not_(AVX::cmpeq_epi32(a.data(), b.data())); }
 Vc_INTRINSIC AVX2:: short_m operator!=(AVX2:: short_v a, AVX2:: short_v b) { return not_(AVX::cmpeq_epi16(a.data(), b.data())); }
 Vc_INTRINSIC AVX2::ushort_m operator!=(AVX2::ushort_v a, AVX2::ushort_v b) { return not_(AVX::cmpeq_epi16(a.data(), b.data())); }
+Vc_INTRINSIC AVX2:: uchar_m operator!=(AVX2:: uchar_v a, AVX2:: uchar_v b) { return not_(AVX::cmpeq_epi8(a.data(), b.data())); }
+Vc_INTRINSIC AVX2:: schar_m operator!=(AVX2:: schar_v a, AVX2:: schar_v b) { return not_(AVX::cmpeq_epi8(a.data(), b.data())); }
 Vc_INTRINSIC AVX2::   int_m operator>=(AVX2::   int_v a, AVX2::   int_v b) { return not_(AVX::cmplt_epi32(a.data(), b.data())); }
 Vc_INTRINSIC AVX2::  uint_m operator>=(AVX2::  uint_v a, AVX2::  uint_v b) { return not_(AVX::cmplt_epu32(a.data(), b.data())); }
 Vc_INTRINSIC AVX2:: short_m operator>=(AVX2:: short_v a, AVX2:: short_v b) { return not_(AVX::cmplt_epi16(a.data(), b.data())); }
